@@ -18,7 +18,7 @@ export class ServiceChatService {
 
   public getNewMessage = () => {
     console.log("getting message");
-    this.socket.on('message', (message) =>{
+    this.socket.on('message', (message:string) =>{
       console.log(`message ${message}`)
       this.message$.next(message);
     });
