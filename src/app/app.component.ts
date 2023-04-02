@@ -7,11 +7,11 @@ import { ServiceChatService } from './service-chat.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  newMessage: string = "Hello world";
+  newMessage: string;
   messageList: string[] = [];
 
   constructor(private chatService: ServiceChatService){
-
+    this.newMessage = "";
   }
 
   ngOnInit(){
